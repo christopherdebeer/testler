@@ -14,7 +14,7 @@ module.exports = function (app) {
 
 	app.get("/testler.json", function (req,res) {
 		res.json(testObj);
-	)};
+	});
 
 	app.post("/testler.json", function (req,res) {
 		res.json(testObj)
