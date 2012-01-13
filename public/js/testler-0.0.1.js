@@ -5,7 +5,8 @@ var testler = (function($){
 	$(document).ready(function(){
 		$(".testler").each( function(i, el){
 
-			var testlerID = $(el).attr("class");
+			var classes = $(el).attr("class").split(" "),
+				testlerID = classes.map(function(cls){if (cls.substring(5,0) === 'test-') return cls});
 			console.log(testlerID);
 
 		});
