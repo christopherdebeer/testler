@@ -1,8 +1,50 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #102339;
 }
 
-a {
-  color: #00B7FF;
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #fff;
+  background-color: #102e5a;
 }
+#header, 
+#footer {
+  background-color: #102339;
+  padding: 10px;
+  color: #777;
+}
+
+#header > .inner, 
+#footer > .inner {
+  overflow: auto;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto; 
+}
+
+#header > .inner .right, 
+#footer > .inner .right { float: right; }
+
+#header > .inner .left, 
+#footer > .inner .right { float: left; }
+
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+a {
+  color: #fac802;
+  text-decoration: none;
+}
+
+h1.logo {
+  width: 400px;
+  height: 197px;
+  background: url("/img/testler-logo.png") left top no-repeat transparent;
+  margin: 20px auto 0;
+  text-indent: -999em;
+}
+

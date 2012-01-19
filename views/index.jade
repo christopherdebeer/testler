@@ -1,14 +1,15 @@
-h1= title
 p Welcome to #{title}
 p This is a test page for TestlerAlpha
 
 p
-	span.testler.test-123456 This copy should change to meet test results. 
-	span.other This copy should stay the same. 
-p
-	span The followinf copy should get a new class based on test results
-	span.testler.test-123457
+	a(href="/join", class="testler tsl-4f15878c948fb4ce1300000c") Sign up
+		
 
-p Thank you and good night
+p
+	a(href="/create") Create 
+	| a new testler test.
+
+p#done
+	em Thank you &amp; good night
 
 script(type="text/javascript", src="/js/testler-0.0.1.js")

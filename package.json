@@ -1,6 +1,6 @@
 {
   "name": "testler",
-  "version": "0.0.2",
+  "version": "0.0.2-150",
   "private": true,
   "dependencies": {
     "express": "2.5.2",

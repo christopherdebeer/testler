@@ -3,19 +3,22 @@
  * Module dependencies.
  */
 
-var express = require('express');
+var express = require('express'),
+    mongoose  = require('mongoose'),
+    brain     = require('brain');
 
 var app = module.exports = express.createServer();
 
 // Configuration
 
 app.configure(function(){
+  app.db = require("./lib/dbconfig");
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
-  app.use(express.session({ secret: 'your secret here' }));
+  // app.use(express.session({ secret: 'your secret here' }));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
@@ -32,5 +35,5 @@ app.configure('production', function(){
 
 var routes = require('./routes')(app);
 
-app.listen(3000);
+app.listen(80);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
