@@ -1,0 +1,4 @@
+- if (req.loggedIn)
+	p Signed in as: #{req.user.sourceInfo.name} (<a href="/auth/logout">Logout</a>)
+- else
+	p Sign in with: <a href="/auth/twitter">Twitter</a>, <a href="/auth/facebook">Facebook</a>, <a href="/auth/google">Google</a>

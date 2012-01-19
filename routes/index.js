@@ -27,7 +27,7 @@ module.exports = function (app) {
 		};
 	
 	app.get("/", function (req,res) {
-		res.render('index', { title: 'Testler' });
+		res.render('index', { title: 'Testler', req: req });
 	});
 
 	app.get("/tests", function (req,res) {
@@ -36,6 +36,10 @@ module.exports = function (app) {
 			else res.json({error: err});
 		})
 	});
+
+	app.get("/signin", function(req,res) {
+		res.render('signin', {title: "testler", req: req })
+	})
 
 	app.get("/purge", function(req,res){
 		if (req.url === '/purge?doit=now') {
@@ -56,7 +60,7 @@ module.exports = function (app) {
 	})
 
 	app.get("/create", function(req,res){
-		res.render('create',{title: 'Testler'});
+		res.render('create',{title: 'Testler', req: req });
 	})
 
 	app.post("/new", function(req,res) {
@@ -147,10 +151,9 @@ module.exports = function (app) {
 
 	app.get("/updateTests", function (req,res) {
 
-		var info = JSON.parse(url.parse(req.url, true).query.testler);
-
-		console.log("UpdateTests REQ: ", info);
-		res.json({status: "OK", code: "200", query: info});
+		//var info = JSON.parse(url.parse(req.url, true).query.testler);
+		//console.log("UpdateTests REQ: ", info);
+		res.json({status: "OK", code: "200", query: "info"});
 	});
   
 };
